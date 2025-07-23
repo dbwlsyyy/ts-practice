@@ -48,12 +48,11 @@ class UserManager {
     public updateUserRole = (id: number, newRole: UserRole): Boolean => {
         const userToUpdate = this.getUserById(id);
 
-        if (typeof userToUpdate !== null) {
-            userToUpdate.role = newRole;
-
+        if (userToUpdate === null) {
             console.log('해당 아이디는 없는 아이디 입니다, update 실패');
             return false;
         } else {
+            userToUpdate.role = newRole;
             console.log(
                 `${id}번 아이디의 유저 role이 업데이트 됨, update 성공`
             );
