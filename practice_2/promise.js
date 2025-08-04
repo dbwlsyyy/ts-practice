@@ -20,6 +20,21 @@ const getUserInfo = (userId) => __awaiter(void 0, void 0, void 0, function* () {
                     name: `user-${userId}`,
                     id: userId,
                     email: `${userId}@test.com`,
+                    address: {
+                        street: 'string',
+                        suite: 'string',
+                        city: 'string',
+                        zipcode: 'string',
+                        geo: {
+                            lat: 'string',
+                            lng: 'string',
+                        },
+                    },
+                    company: {
+                        name: 'string',
+                        catchPhrase: 'string',
+                        bs: 'string',
+                    },
                 });
             }
         }, 500);
