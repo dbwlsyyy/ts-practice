@@ -8,6 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 const getUserInfo = (userId) => __awaiter(void 0, void 0, void 0, function* () {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -44,7 +45,7 @@ const runFetch = () => __awaiter(void 0, void 0, void 0, function* () {
     catch (err) {
         if (err instanceof Error) {
             console.error(err.message); // 콘솔에러랑 쓰로우 뉴 에러 둘 다 써도 되는지 ?
-            throw new Error(err.message);
+            // throw new Error(err.message);
         }
     }
     console.log('------- 케이스2 : 실패 --------');
@@ -55,7 +56,7 @@ const runFetch = () => __awaiter(void 0, void 0, void 0, function* () {
     catch (err) {
         if (err instanceof Error) {
             console.error(err.message); // 콘솔에러랑 쓰로우 뉴 에러 둘 다 써도 되는지 ?
-            throw new Error(err.message);
+            // throw new Error(err.message); 쓰면 안됨
         }
     }
 });

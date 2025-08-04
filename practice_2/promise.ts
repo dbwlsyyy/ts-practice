@@ -1,15 +1,4 @@
-interface UserProfile {
-    id: number; // interface User 로 하니까 id키에 오류 뜨던데 이유가 뭐가 ?
-    name: string;
-    email: string;
-}
-
-interface Post {
-    id: number;
-    userId: number;
-    title: string;
-    body: string;
-}
+import { Post, UserProfile } from '../types';
 
 const getUserInfo = async (userId: number): Promise<UserProfile> => {
     return new Promise((resolve, reject) => {
@@ -48,7 +37,7 @@ const runFetch = async () => {
     } catch (err: unknown) {
         if (err instanceof Error) {
             console.error(err.message); // 콘솔에러랑 쓰로우 뉴 에러 둘 다 써도 되는지 ?
-            throw new Error(err.message);
+            // throw new Error(err.message);
         }
     }
 
@@ -59,7 +48,7 @@ const runFetch = async () => {
     } catch (err: unknown) {
         if (err instanceof Error) {
             console.error(err.message); // 콘솔에러랑 쓰로우 뉴 에러 둘 다 써도 되는지 ?
-            throw new Error(err.message);
+            // throw new Error(err.message); 쓰면 안됨
         }
     }
 };
